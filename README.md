@@ -10,7 +10,7 @@ Open your command line and type in:
   
   `-o  your-output-obj-path-here` 
 
-and Bob's your uncle! :construction_worker:
+Please make sure to use the absolute paths to the respective directories.
 
 ### :wrench: Optional features
 
@@ -23,7 +23,7 @@ and Bob's your uncle! :construction_worker:
 | Conversion of the resulting dataset into a local coordinate system | `-t 1`|
 | Translation of the CityGML dataset into a local coordinate system before further processing, without saving the translation parameters|`-tC 1`|
 | Translation of the CityGML dataset into a local coordinate system before further processing, with saving the translation parameters to a designated .txt file|`-tCw 1`|
-|xy座標を入れ替えます。|`-xyz`|
+|平面直角座標系におけるxy座標を入れ替え、東がx軸、北がy軸になります。|`-yx`|
 
 
 ## :page_with_curl: Requirements
