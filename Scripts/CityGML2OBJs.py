@@ -82,6 +82,8 @@ def write_vertices(list_vertices, cla):
     for each in list_vertices:
         lat, lon, z = each[1], each[0], each[2]
         x, y = Translation.transform(lon, lat)
+        if ARGS['yx']:
+            x, y = y, x
         transformed_vertices.append((x, y, z))
     global vertices_output
     for each in transformed_vertices:
@@ -132,7 +134,6 @@ def poly_to_obj(poly, cl, material=None):
         # print("irings: ", irings)
     # -- If the polygon validation option is enabled
     if VALIDATION:
-        print("124")
         # -- Check the polygon
         valid = polygon3dmodule.isPolyValid(epoints_clean, True)
         if valid:
@@ -155,7 +156,6 @@ def poly_to_obj(poly, cl, material=None):
                     # t = polygon3dmodule.triangulation(epoints_clean, irings)
 
             # -- Process the triangles/polygons
-            print("ABC")
             for tri in t:
                 # -- Face marker
                 f = "f "
@@ -234,6 +234,8 @@ PARSER.add_argument('-tC', '--translateCityGML',
 PARSER.add_argument('-tCw', '--translateCityGMLwrite',
                     help='Perform a Translation of the CityGML Dataset into a local CRS before further processing. The translation parameters are stored in a designated .txt file. No Translation is default ',
                     required=False)
+PARSER.add_argument('-yx', action='store_true', help='Swap x and y coordinates.')
+ARGS = PARSER.parse_args()
 PARSER.add_argument('--epsg', type=int, default=6677, help='EPSG code for projection')
 args = PARSER.parse_args()
 Translation = Transformer.from_crs("epsg:6668", f"epsg:{args.epsg}")
@@ -673,7 +675,6 @@ for f in files_found:
 
 
         if len(other) > 0:
-            
 
             vertices_output['Other'] = []
             local_vertices = {}
