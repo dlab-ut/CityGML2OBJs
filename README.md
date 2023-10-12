@@ -75,10 +75,7 @@ Information on the limitations can be found in this [Wiki Page](https://github.c
 このCityGML2OBJのバージョンでは、オリジナルの[CityGML2OBJ 2.0](https://github.com/tum-gis/citygml2obj-2.0)に対して、以下の追加機能があります：
 
 ### 座標系の変換
-- **地理座標からデカルト座標への変換**：このバージョンでは、地理座標系（緯度と経度）を平面直角座標系に変換する機能が導入されています。
-
-
-
+- **地理座標から面直角座標への変換**：このバージョンでは、地理座標系（緯度と経度）を平面直角座標系に変換する機能などが導入されています。
 
 
 
@@ -86,10 +83,4 @@ Information on the limitations can be found in this [Wiki Page](https://github.c
 ## :handshake: Credits
 This project is based on [CityGML2OBJ 2.0](https://github.com/tum-gis/citygml2obj-2.0) by Thomas Froech, Benedikt Schwab, and Olaf Wysocki. The original project is distributed under the MIT License. See `LICENSE` for more information.
 
-## :mailbox: Contact & Feedback
 
-Feel free to open a discussion under Issues or write us an email
-
-- [Thomas Froech](thomas.froech@tum.de)
-- [Benedikt Schwab](benedikt.schwab@tum.de) 
-- [Olaf Wysocki](olaf.wysocki@tum.de)
