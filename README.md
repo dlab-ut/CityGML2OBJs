@@ -23,8 +23,14 @@ Please make sure to use the absolute paths to the respective directories.
 | Conversion of the resulting dataset into a local coordinate system | `-t 1`|
 | Translation of the CityGML dataset into a local coordinate system before further processing, without saving the translation parameters|`-tC 1`|
 | Translation of the CityGML dataset into a local coordinate system before further processing, with saving the translation parameters to a designated .txt file|`-tCw 1`|
+|epsgの番号を指定します。デフォルトは6677|`--epsg [コード番号]`|
 |平面直角座標系におけるxy座標を入れ替え、東がx軸、北がy軸になります。|`-yx`|
 
+### コマンドラインオプション：-yx
+- **XおよびY座標の入れ替え**： `-yx` コマンドラインオプションは、生成されたOBJモデル内のx座標とy座標を入れ替えることを可能にします。これによって平面直角座標系で東方向がx軸、北方向がy軸となるように座標系が変更されます。
+
+### EPSGコードのカスタマイズ
+`--epsg`オプションを使用してEPSGコードをカスタマイズできます。このオプションにより、ユーザーは変換プロセスにおいて使用するEPSGコードを指定できます。各地域におけるEPSGコードの番号は[平面直角座標系 WEBマップ](https://lemulus.me/column/jpc-map)をご確認下さい。
 
 ## :page_with_curl: Requirements
 
@@ -71,8 +77,10 @@ Information on the limitations can be found in this [Wiki Page](https://github.c
 ### 座標系の変換
 - **地理座標からデカルト座標への変換**：このバージョンでは、地理座標系（緯度と経度）を平面直角座標系に変換する機能が導入されています。
 
-### コマンドラインオプション：-yx
-- **XおよびY座標の入れ替え**： `-yx` コマンドラインオプションは、生成されたOBJモデル内のx座標とy座標を入れ替えることを可能にします。これによって平面直角座標系で東方向がx軸、北方向がy軸となるように座標系が変更されます。
+
+
+
+
 
 
 ## :handshake: Credits
