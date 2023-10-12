@@ -64,6 +64,17 @@ Using Python 3.10 and Windows 10 OS
 
 Information on the limitations can be found in this [Wiki Page](https://github.com/tum-gis/citygml2obj-2.0/wiki/Limitations) 
 
+## :sparkles: このフォークで追加された機能
+
+このCityGML2OBJのバージョンでは、オリジナルの[CityGML2OBJ 2.0](https://github.com/tum-gis/citygml2obj-2.0)に対して、以下の追加機能があります：
+
+### 座標系の変換
+- **地理座標からデカルト座標への変換**：このバージョンでは、地理座標系（緯度と経度）を平面直角座標系に変換する機能が導入されています。
+
+### コマンドラインオプション：-yx
+- **XおよびY座標の入れ替え**： `-yx` コマンドラインオプションは、生成されたOBJモデル内のx座標とy座標を入れ替えることを可能にします。これによって平面直角座標系で東方向がx軸、北方向がy軸となるように座標系が変更されます。
+
+
 ## :handshake: Credits
 This project is based on [CityGML2OBJ 2.0](https://github.com/tum-gis/citygml2obj-2.0) by Thomas Froech, Benedikt Schwab, and Olaf Wysocki. The original project is distributed under the MIT License. See `LICENSE` for more information.
 
