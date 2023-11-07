@@ -326,7 +326,6 @@ def writeTransparam2File(filename, directory, transParam):
 
 def translateToLocalCRS(CITYGML, file, root, ns_bldg, ns_gml, ns_citygml, ns_frn, ns_veg, directory, write2file=False,
                         applyHeight=Decimal("0")):
-    print("へんかんされた！")
     envelopes = getEnvelopes(root, ns_bldg, ns_gml, ns_citygml)
     transParam = getTranslationParameters(envelopes, ns_gml)
     transParam.append(applyHeight)
